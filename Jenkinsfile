@@ -3,9 +3,8 @@ pipeline {
   stages {
     stage('Checkout code') {
       steps {
-        git(url: 'https://github.com/TheAmazingSui/JenkinsTest', branch: 'main')
+        git credentialsId: 'github-sui', url: 'https://github.com/TheAmazingSui/JenkinsTest', branch: 'main'
       }
     }
-
   }
 }
